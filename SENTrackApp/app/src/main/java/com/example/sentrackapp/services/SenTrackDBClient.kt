@@ -32,6 +32,7 @@ object SenTrackDBClient {
 
         return@Interceptor it.proceed(request)
     }
+
     private val okHttpClient = OkHttpClient.Builder()
                                 .addInterceptor(requestInterceptor)
                                 .connectTimeout(60,TimeUnit.SECONDS)

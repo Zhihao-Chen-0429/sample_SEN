@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             trackResponse?.let {
                 Log.i("trackResponse","$trackResponse")
                 mBinding?.rvMovieList?.layoutManager = LinearLayoutManager(this)
-                mBinding?.rvMovieList?.adapter = TrackAdapter(it.results,this)
+                mBinding?.rvMovieList?.adapter = TrackAdapter(it.trackLists,this)
             }
         })
 

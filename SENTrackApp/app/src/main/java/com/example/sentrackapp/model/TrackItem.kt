@@ -1,8 +1,15 @@
 package com.example.sentrackapp.model
 
+import com.google.gson.annotations.SerializedName
+
 data class TrackItem(
     val id: Int,
-    val poster_path: String,
-    val release_date: String,
+
+    @SerializedName("poster_path")
+    val posterPath: String,
+
+    @SerializedName("release_date")
+    val releaseDate: String,
+
     val title: String,
 )

@@ -25,9 +25,9 @@ class TrackAdapter(private val trackList: List<TrackItem>, private val mContext:
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.title.text = trackList[position].title
-        holder.date.text = trackList[position].release_date
+        holder.date.text = trackList[position].releaseDate
         Glide.with(mContext)
-            .load(POSTER_BASE_URL + trackList[position].poster_path)
+            .load(POSTER_BASE_URL + trackList[position].posterPath)
             .into(holder.image)
     }
 
